@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{  url_for('static', filename='css/main.css')  }}">
+        <link rel="stylesheet" href="{{  url_for('static', filename='css/responsive1.css')  }}">
+        <link type="Image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2946/2946177.png" rel="icon">
+        <title>GameCritic</title>
+        
+    </head>
+    <body>
+        <a href="{{ url_for('main_page') }}" id="title">GameCritic</a>
+        <ul id="nav">
+            <a href="{{ url_for('main_page') }}" id="vspomog">Главная</a>
+            <a href="{{ url_for('catalog') }}" id="glavn">Каталог</a>
+            <a href="{{ url_for('login_page') }}" id="vspomog">Войти</a>
+        </ul>
+
+
+        <div id="card1" class="card" style="width: 18rem;">
+            <img src="https://sun9-47.userapi.com/impg/ZtaG-O2bqc0nXTdpYnbA9_uUe3CWdQ19fL0C4g/6_IyU2ftE00.jpg?size=320x320&quality=95&sign=07f52226f06fc65cd275789be6532898&type=album" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">The Spell Brigade</h5>
+              <p class="card-text">Игра в жанре survivors с ОНЛАЙН-КООПЕРАТИВОМ (1-4 игрока). Сразите полчища с друзьями-волшебниками. Командные задачи, улучшения и мощные магические синергии. Дружественный огонь в аду пуль: никто не в безопасности! Быстрый рогалик-экшен.</p>
+              <a href="{{ url_for('rates_of_The_Spell_Brigade') }}" class="btn btn-primary btn-success btn-lg">
+                {% for rate1 in spell_rate%}
+                  {{ rate1[0] }}
+                {% endfor %}
+              </a>
+              <a href="{{ url_for('rates_of_The_Spell_Brigade') }}" class="btn btn-primary btn-sm">Перейти на страницу игры</a>
+            </div>
+          </div>
+
+
+        <div id="card2" class="card" style="width: 18rem;">
+            <img src="https://sun9-14.userapi.com/impg/WT-GQXDu22bQm3IBt3gf_PjAGivj_x8txoN-1Q/XBDhDVmISbM.jpg?size=320x320&quality=95&sign=bfad8876bf325571fad5f5fe6fbfea79&type=album" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">MORDHAU</h5>
+              <p class="card-text">MORDHAU — многопользовательский средневековый слэшер. Создайте наемника и участвуйте в жестоких сражениях, где вас ждут напряженные бои, осады замков, кавалерийские атаки и многое другое.</p>
+              <a href="{{ url_for('rates_of_MORDHAU') }}" class="btn btn-primary btn-success btn-lg">
+                {% for rate2 in MORDHAU_rate %}
+                  {{ rate2[0] }}
+                {% endfor %}</a>
+              <a href="{{ url_for('rates_of_MORDHAU') }}" class="btn btn-primary btn-sm">Перейти на страницу игры</a>
+            </div>
+          </div>
+
+
+        <div id="card3" class="card" style="width: 18rem;">
+            <img src="https://sun9-52.userapi.com/impg/f7Vhd-JbExQPG73czV9gTVLXrNE1xLluKTQlrw/Fj2lAJJuJ4Y.jpg?size=320x320&quality=95&sign=a280afac194c58726cc35dee7655c94b&type=album" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Will To Live Online</h5>
+              <p class="card-text">Will To Live - MMORPG-шутер, действие которого разворачивается в суровом постапокалиптическом мире. Исследуй мир, вступай в схватки с мутантами и с другими выжившими, вступай в кланы в борьбе за существование и докажи свое право на Жизнь.</p>
+              <a href="{{ url_for('rates_of_Will_To_Live_Online') }}" class="btn btn-primary btn-success btn-lg">
+                {% for rate3 in will_rate %}
+                  {{ rate3[0] }}
+                {% endfor %}</a>
+              <a href="{{ url_for('rates_of_Will_To_Live_Online') }}" class="btn btn-primary btn-sm">Перейти на страницу игры</a>
+            </div>
+        </div>
+
+
+        <div id="card4" class="card" style="width: 18rem;">
+          <img src="https://psv4.userapi.com/s/v1/d/6WY87zB6bxoeYAzJpoTFLFdO3mJWtLlqltbUaWx6pE8YRBwu_vY-TXK14un_9s_DSNDmT27e3rLYhq-4dxc7ZwCt3nGxWFhId_YOaqi2ypXK4cLrKbTMeg/photo_2024-12-03_20-30-32_1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Escape From Tarkov</h5>
+            <p class="card-text">Escape from Tarkov / Побег из Таркова - это хардкорная реалистичная сюжетная многопользовательская онлайн-игра, сочетающая в себе черты жанров FPS / TPS, боевого симулятора и RPG c ММО элементами.</p>
+            <a href="{{ url_for('rates_of_Escape_From_Tarkov') }}" class="btn btn-primary btn-success btn-lg">
+              {% for rate4 in eft_rate %}
+                  {{ rate4[0] }}
+              {% endfor %}
+            </a>
+            <a href="{{ url_for('rates_of_Escape_From_Tarkov') }}" class="btn btn-primary btn-sm">Перейти на страницу игры</a>
+          </div>
+      </div>
+
+
+      <div id="card5" class="card" style="width: 18rem;">
+        <img src="https://sun9-10.userapi.com/impg/Ugtu0FxjZvfCT3eWAqrLYs-Czp9rDfU815YzSQ/s5_UYwZj2_0.jpg?size=320x320&quality=95&sign=e07babb4af0e7a31d6cbdfc4cda38fae&type=album" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Don't Starve Together</h5>
+          <p class="card-text">Сражайтесь, занимайтесь фермерством, стройте и исследуйте мир вместе в автономном многопользовательском дополнении к бескомпромиссной игре на выживание в дикой природе Don't Starve.</p>
+          <a href="{{ url_for('rates_of_Dont_Starve_Together') }}" class="btn btn-primary btn-success btn-lg">
+            {% for rate5 in starv_rate %}
+                {{ rate5[0] }}
+            {% endfor %}
+          </a>
+          <a href="{{ url_for('rates_of_Dont_Starve_Together') }}" class="btn btn-primary btn-sm">Перейти на страницу игры</a>
+        </div>
+      </div>
+
+
+      <div id="card6" class="card" style="width: 18rem;">
+        <img src="https://sun9-77.userapi.com/impg/QwoYYwwGTM2AFDNITp8POSHLs7ZuUuHq6TahLg/vlzspaurBlw.jpg?size=320x320&quality=95&sign=8784f9c3079e043d8e19839f7c483ef3&type=album" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Verdun</h5>
+          <p class="card-text">«Verdun» – первый многопользовательский шутер от первого лица в реалистичном сеттинге Первой мировой войны</p>
+          <a href="{{ url_for('rates_of_Verdun') }}" class="btn btn-primary btn-success btn-lg">
+            {% for rate6 in verdun_rate %}
+              {{ rate6[0] }}
+            {% endfor %}
+          </a>
+          <a href="{{ url_for('rates_of_Verdun') }}" class="btn btn-primary btn-sm">Перейти на страницу игры</a>
+        </div>
+      </div>
+
+
+      <div id="card7" class="card" style="width: 18rem;">
+        <img src="https://sun9-80.userapi.com/impg/uLF0qnP5H9vn6b41InHzX9UGwIxYkeRpl5LN_Q/Xg64ReudT9M.jpg?size=320x320&quality=95&sign=1a6dbf247646b58cefa9ec5d5444e62d&type=album" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Eden Crafters</h5>
+          <p class="card-text">Отправьтесь в приключение выживания, крафта и автоматизации в Eden Crafters, совместной игре с открытым миром, в которой вам предстоит превратить враждебную планету в убежище для человечества.</p>
+          <a href="{{ url_for('rates_of_Eden_Crafters') }}" class="btn btn-primary btn-success btn-lg">
+            {% for rate7 in eden_rate %}
+              {{ rate7[0] }}
+            {% endfor %}
+          </a>
+          <a href="{{ url_for('rates_of_Eden_Crafters') }}" class="btn btn-primary btn-sm">Перейти на страницу игры</a>
+        </div>
+    </div>
+
+
+    <div id="card8" class="card" style="width: 18rem;">
+      <img src="https://sun9-36.userapi.com/impg/X0wEo6WyWUf4XtP7mSpyWMfQ6Alu24mr9GCH-Q/_9K5-j3ZFKI.jpg?size=500x500&quality=95&sign=cd0c11f789591e71eff547df0f5ba077&type=album" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">SOMA</h5>
+        <p class="card-text">Разработчики игры "Amnesia: Призрак прошлого" создали новый научно-фантастический ужастик SOMA, сюжет которого перенесёт вас на дно Атлантического океана.</p>
+        <a href="{{ url_for('rates_of_SOMA') }}" class="btn btn-primary btn-success btn-lg">
+          {% for rate8 in SOMA_rate %}
+            {{ rate8[0] }}
+          {% endfor %}
+        </a>
+        <a href="{{ url_for('rates_of_SOMA') }}" class="btn btn-primary btn-sm">Перейти на страницу игры</a>
+      </div>
+
+
+  </div>
+        <hr id="like">
+        <div id="prava">&copy; Все права защищены. </div>
+        <p id="cbyaz">Для связи:<br>nekserxx@mail.ru
+        </p>
+    </body>
+</html>

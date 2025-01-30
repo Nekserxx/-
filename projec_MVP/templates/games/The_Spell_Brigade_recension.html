@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{  url_for('static', filename='css/main.css')  }}">
+        <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+        <link rel="stylesheet" href="{{  url_for('static', filename='css/responsive1.css')  }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.css" integrity="sha512-4OzqLjfh1aJa7M33b5+h0CSx0Q3i9Qaxlrr1T/Z+Vz+9zs5A7GM3T3MFKXoreghi3iDOSbkPMXiMBhFO7UBW/g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link type="Image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2946/2946177.png" rel="icon">
+        <title>GameCritic</title>
+        
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.js" integrity="sha512-f26fxKZJiF0AjutUaQHNJ5KnXSisqyUQ3oyfaoen2apB1wLa5ccW3lmtaRe2jdP5kh4LF2gAHP9xQbx7wYhU5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <a href="{{ url_for('main_page') }}" id="title">GameCritic</a>
+        <ul id="nav">
+            <a href="{{ url_for('main_page') }}" id="vspomog">Главная</a>
+            <a href="{{ url_for('rates_of_The_Spell_Brigade') }}" id="glavn">Игра</a>
+            <a href="{{ url_for('login_page') }}" id="vspomog">Войти</a>
+        </ul>
+        <div id="cardone" class="card">
+            <div data-step="1" data-intro='Добро пожаловать в меню оставления рецензий!' class="card-header">
+              Оставление рецензии
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">The Spell Brigade</h5>
+              <p class="card-text">Игра в жанре survivors с ОНЛАЙН-КООПЕРАТИВОМ (1-4 игрока). <br>Сразите полчища с друзьями-волшебниками. <br>Командные задачи, улучшения и мощные магические синергии. <br>Дружественный огонь в аду пуль: никто не в безопасности! <br>Быстрый рогалик-экшен.</p>
+              <button id="buttontest" class="btn btn-primary btn-success btn-lg">
+                {% for rete_cur in rate%}
+                    {{ rete_cur[0] }}
+                {% endfor %}
+              </button>
+            </div>
+          </div>
+        <form method = 'post'>
+            <textarea name="title_input" data-step="2" data-intro='В данном окне вы можете оставить заголовок для вашей рецензии.' id="form3" type="text" maxlength="150" placeholder="Введите заголовок рецензии до 150 символов"></textarea>
+            <textarea name="text_input" data-step="3" data-intro='В данном окне вы можете заполнить рецензию, рассказать о вашем опыте и геймплее в этой игре.'  id="form1" type="text" maxlength="8500" placeholder="Введите текст рецензии до 8500 символов"></textarea>
+            <div id="test1" class="slidecontainer">
+              <p id="input2">Механики: <span id="demo"></span></p>
+              <input name="mexaniki_input" data-step="4" data-intro='С помощью этих слайдеров вы можете оставить оценку по определённому параметру игры, если вам интересно что означает каждый параметр - наведитесь на знак "?" слева от текста.' type="range" min="1" max="10" value="0" class="slider" id="myRange">
+            </div>
+          <abbr id="test1info" title="Оценка различным механикам, системам представленным в данной игре.">(?)</abbr>
+          <div id="test2" class="slidecontainer">
+              <p id="input2">Сюжет: <span id="demo1"></span></p>
+              <input name="plot_input" type="range" min="1" max="10" value="0" class="slider" id="myRange1">
+            </div>
+          <abbr id="test2info" title="Оценка сюжетной части игры: квесты, история, история персонажей и т.д.">(?)</abbr>
+          <div id="test3" class="slidecontainer">
+              <p id="input2">Минусы: <span id="demo2"></span></p>
+              <input name="minus_input" type="range" min="1" max="10" value="0" class="slider" id="myRange2">
+            </div>
+          <abbr id="test3info" title="Недостатки игры, различные баги/недоработки.">(?)</abbr>
+          <div id="test4" class="slidecontainer">
+              <p id="input2">Вайб: <span id="demo3"></span></p>
+              <input name="vibe_input" type="range" min="1" max="10" value="0" class="slider" id="myRange3">
+            </div>
+          <abbr id="test4info" title="Атмосфера предоставленная в игре, удобство геймплея и ваши эмоции от игры.">(?)</abbr>
+          <div id="test5" class="slidecontainer">
+              <p id="input2">Цена: <span id="demo4"></span></p>
+              <input name="cost_input" type="range" min="1" max="10" value="0" class="slider" id="myRange4">
+            </div>
+          <abbr id="test5info" title="Соответствие стоимости игры и качества предоставленного контента, стоит ли игра своего.">(?)</abbr>
+          <div id="test6" class="slidecontainer">
+              <p id="input2">Оптимизация: <span id="demo5"></span></p>
+              <input name="optimization_input" type="range" min="1" max="10" value="0" class="slider" id="myRange5">
+            </div>
+          <abbr id="test6info" title="Техническая оптимизированность игры под различные устройства/тесты. (Как хорошо игра идёт на вашем устройстве?)">(?)</abbr>
+          <button id="result" type="button" class="btn btn-success">Общая оценка: <span id="result"></span></button>
+          <button id="form2" type="sumbit" class="btn btn-primary">Отправить</button>
+        </form>
+        <hr id="like">
+        <div id="prava">&copy; Все права защищены. </div>
+        <p id="cbyaz">Для связи:<br>nekserxx@mail.ru
+        </p>
+        <script>
+          introJs().start();
+      </script>
+      <script>
+        var slider1 = document.getElementById("myRange");
+        var demo = document.getElementById("demo");
+        demo.innerHTML = slider1.value;
+        
+        slider1.oninput = function() {
+            demo.innerHTML = this.value;
+            updateResult();
+        }
+
+        var slider2 = document.getElementById("myRange1");
+        var demo1 = document.getElementById("demo1");
+        demo1.innerHTML = slider1.value;
+
+        slider2.oninput = function() {
+            demo1.innerHTML = this.value;
+            updateResult();
+        }
+
+        var slider3 = document.getElementById("myRange2");
+        var demo2 = document.getElementById("demo2");
+        demo2.innerHTML = slider1.value;
+
+        slider3.oninput = function() {
+            demo2.innerHTML = this.value;
+            updateResult();
+        }
+
+        var slider4 = document.getElementById("myRange3");
+        var demo3 = document.getElementById("demo3");
+        demo3.innerHTML = slider1.value;
+
+        slider4.oninput = function() {
+            demo3.innerHTML = this.value;
+            updateResult();
+        }
+
+        var slider5 = document.getElementById("myRange4");
+        var demo4 = document.getElementById("demo4");
+        demo4.innerHTML = slider1.value;
+
+        slider5.oninput = function() {
+            demo4.innerHTML = this.value;
+            updateResult();
+        }
+
+        var slider6 = document.getElementById("myRange5");
+        var demo5 = document.getElementById("demo5");
+        demo5.innerHTML = slider1.value;
+
+        slider6.oninput = function() {
+            demo5.innerHTML = this.value;
+            updateResult();
+        }
+        function updateResult() {
+            var a = Number(demo.innerHTML);
+            var b = Number(demo1.innerHTML);
+            var c = Number(demo2.innerHTML);
+            var d = Number(demo3.innerHTML);
+            var e = Number(demo4.innerHTML);
+            var f = Number(demo5.innerHTML);
+
+            var total = a * 1.8 + b * 1.9 + c * 1.5 + d * 2.5 + e * 1.1 + f * 1.2;
+
+            var firstTwoDigits = Math.floor(total).toString().slice(0, 3); 
+
+            var result = 'Общая оценка: ' + firstTwoDigits;
+            document.getElementById("result").innerHTML = result; }
+
+window.onbeforeunload = function() {
+  // Не уходите, еще не все сохранено
+  return changesMade ? "Ваши изменения не сохранены." : undefined;
+};
+var changesMade = false;
+
+// Задействуем каждый элемент формы
+document.querySelectorAll('input, textarea, select').forEach(function(input) {
+    input.onchange = function() {
+        // Изменение зафиксировано!
+        changesMade = true;
+    };
+});
+document.querySelector('form').onsubmit = function() {
+  window.onbeforeunload = null;
+};
+
+      </script>
+    </body>

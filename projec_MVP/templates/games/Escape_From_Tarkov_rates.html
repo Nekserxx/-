@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{  url_for('static', filename='css/main.css')  }}">
+        <link rel="stylesheet" href="{{  url_for('static', filename='css/responsive1.css')  }}">
+        <link type="Image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2946/2946177.png" rel="icon">
+        <title>GameCritic</title>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <a href="{{ url_for('main_page') }}" id="title">GameCritic</a>
+        <ul id="nav">
+            <a href="{{ url_for('main_page') }}" id="vspomog">Главная</a>
+            <a href="{{ url_for('catalog') }}" id="glavn">Каталог</a>
+            <a href="{{ url_for('login_page') }}" id="vspomog">Войти</a>
+        </ul>
+
+        {% for msg in get_flashed_messages() %}  									
+            <div id="alert" class="alert alert-danger" role="alert">
+                {{msg}}
+            </div>								
+        {% endfor %}
+
+        <a id="picture"><img src="https://psv4.userapi.com/s/v1/d/6WY87zB6bxoeYAzJpoTFLFdO3mJWtLlqltbUaWx6pE8YRBwu_vY-TXK14un_9s_DSNDmT27e3rLYhq-4dxc7ZwCt3nGxWFhId_YOaqi2ypXK4cLrKbTMeg/photo_2024-12-03_20-30-32_1.jpg"></a>
+        <div id="imgtext2">Escape From Tarkov</div>
+        <div id="imgtext8">Издатель: BattleState Games</div>
+        <div id="imgtext3">Платформы: PC</div>
+        <div id="imgtext7">Теги: Survival, RPG, FPS/TPS</div>
+        <div id="imgtext9">Дата выхода: 28.07.2017</div>
+        <div id="imgtext4">
+            {% for r in st %}
+                Текущая оценка основанная на {{r[0][0][0]}} {{r[1]}}:
+            {% endfor %}
+        </div>
+        <div id="button2">
+            <a href="{{ url_for('rate_Escape_From_Tarkov') }}" class="btn btn-primary btn-success btn-lg" role="button" aria-pressed="true">
+                {% for rete_cur in rate%}
+                    {{ rete_cur[0] }}
+                {% endfor %}
+            </a>                    
+        </div>
+        <hr id="like">
+        <div id="imgtext5">Оставить свою рецензию:</div>
+        <a id="linkbutton" href="{{ url_for('rate_Escape_From_Tarkov') }}" class="btn btn-primary btn-lg">Перейти</a>
+        <div id="imgtext6">Рецензии других пользователей:</div>
+
+        {% for inf in recs%}
+            <div  id="cardrecension" class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">{{ inf[1] }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{inf[-1]}}</h6>
+                <p class="card-text">{{inf[2]}}</p>
+                <a href="#" class="btn btn-primary btn-success btn-lg">{{inf[0]}}</a>
+                </div>
+            </div>
+        {% endfor %}
+
+        <hr id="like">
+        <div id="prava">&copy; Все права защищены. </div>
+        <p id="cbyaz">Для связи:<br>nekserxx@mail.ru
+        </p>
+    </body>

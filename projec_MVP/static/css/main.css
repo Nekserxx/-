@@ -1,0 +1,465 @@
+@import url('https://fonts.google.com/share?selection.family=Montserrat:ital.');
+
+* { 
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 920px;
+    background: linear-gradient(#2f4223,#141414);
+}
+
+a#glavn {
+    color: white;
+}
+a#vspomog {
+    color:#504e4e
+}
+#title {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: xx-large;
+    height: 50px;
+    position: relative;
+    float: left;
+    width: 600px;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+}
+ul#nav {
+    list-style: none;
+    display: block;
+    float: right;
+    width: 700px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    font-size: x-large;
+    margin-top: 26px;
+    margin-right: 600px;
+}
+
+#nav li {
+    display:inline;
+    padding: 0 20px;
+    cursor: pointer;
+}
+#nav a {
+
+    padding: 0 20px;
+    cursor: pointer;
+    margin: 20px;
+    text-decoration: none;
+}
+
+#nav li:hover {
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    border-color: #333;
+}
+#nav a:hover {
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    border-color: #333;
+}
+
+#nav li:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+#imgtext {
+    color: white;
+    text-align: center;
+    margin-left: 500px;
+    float: left;
+    margin-top: 200px;
+    font-size: xx-large;
+}
+#imgtext1 {
+    color: dimgray;
+    text-align: left;
+    margin-left: 500px;
+    float: left;
+    margin-top: 20px;
+    font-size: medium;
+}
+#img1 {
+    width: 500px;
+    margin-right: 150px;
+    margin-top: 150px;
+    float: right;
+}
+#button1 {
+    float: right;
+    margin-right: 530px;
+}
+#like {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-top: 100px;
+    height: 3px;
+    color: white;
+}
+#prava {
+    width: 414px;
+    margin-left: 100px;
+    padding: 20px 2.5%;
+    float: left;
+    position: relative;
+    color: white;
+    margin-top: 50px;
+}
+#cbyaz {
+    width: 414px;
+    margin-right: 100px;
+    padding: 20px 2.5%;
+    float: right;
+    position: relative;
+    color: white;
+    margin-top: 50px;
+}   
+
+#formd {
+    margin: 20px;
+}
+#text1 {
+    color: white;
+}
+label.form-label {
+    color: white;
+}
+
+#card1 {
+    float: left;
+    position: relative;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+#card2 {
+    float: left;
+    position: relative;
+    margin-left: 150px;
+    margin-top: 55px;
+}
+#card3 {
+    float: left;
+    position: relative;
+    margin-left: 150px;
+    margin-top: 55px;
+}
+#card4 {
+    float: left;
+    position: relative;
+    margin-left: 150px;
+    margin-top: 55px;
+}
+#card5 {
+    float: right;
+    position: relative;
+    margin-top: 75px;
+    margin-right: 200px;
+}
+#card6 {
+    float: right;
+    position: relative;
+    margin-top: 75px;
+    margin-right: 160px;
+}
+#card7 {
+    float: right;
+    position: relative;
+    margin-top: 75px;
+    margin-right: 150px;
+}
+#card8 {
+    float: right;
+    position: relative;
+    margin-top: 75px;
+    margin-right: 150px;
+}
+#picture {
+    float: left;
+    position: relative;
+    margin-left: 200px;
+    margin-top: 75px;
+}
+#imgtext2 {
+    color: white;
+    text-align: center;
+    margin-right: 520px;
+    float: right;
+    margin-top: 100px;
+    font-size: xx-large;
+}
+#imgtext3 {
+    color: lightgray;
+    text-align: center;
+    margin-right: 550px;
+    float: right;
+    margin-top: 10px;
+    font-size: medium;
+}
+#imgtext14 {
+    color: lightgray;
+    text-align: center;
+    margin-right: -100px;
+    float: right;
+    margin-top: 50px;
+    font-size: medium;
+}
+#imgtext8 {
+    color: lightgray;
+    text-align: center;
+    margin-right: 530px;
+    float: right;
+    margin-top: 10px;
+    font-size: medium;
+}
+#imgtext9 {
+    color: lightgray;
+    text-align: center;
+    margin-right: 530px;
+    float: right;
+    margin-top: 10px;
+    font-size: medium;
+}
+#imgtext11 {
+    color: lightgray;
+    text-align: center;
+    margin-right: -130px;
+    float: right;
+    margin-top: 150px;
+    font-size: medium;
+}
+#imgtext12 {
+    color: lightgray;
+    text-align: center;
+    margin-right: -120px;
+    float: right;
+    margin-top: 260px;
+    font-size: medium;
+}
+#imgtext13 {
+    color: lightgray;
+    text-align: center;
+    margin-right: 530px;
+    float: right;
+    margin-top: 20px;
+    font-size: medium;
+}
+#imgtext4 {
+    color: white;
+    text-align: center;
+    margin-right: 400px;
+    float: right;
+    margin-top: 50px;
+    font-size: x-large;
+}
+#imgtext10 {
+    color: lightgray;
+    text-align: center;
+    margin-right: -140px;
+    float: right;
+    margin-top: 110px;
+    font-size: medium;
+}
+#button2 {
+    float: right;
+    margin-right: -300px;
+    margin-top: 100px;
+}
+#imgtext5 {
+    color: white;
+    text-align: center;
+    margin-left: 800px;
+    float: left;
+    margin-top: 50px;
+    font-size: x-large;
+}
+#form1 {
+    float: left;
+    position: relative;
+    margin-top: 70px;
+    margin-left: 590px;
+    height: 200px;
+    width: 700px;
+}
+#form3 {
+    float: left;
+    position: relative;
+    margin-top: 70px;
+    margin-left: 590px;
+    height: 50px;
+    width: 700px;
+}
+#form2 {
+    float: left;
+    position: relative;
+    margin-top: 620px;
+    margin-left: -530px;
+}
+#imgtext6 {
+    color: white;
+    text-align: center;
+    margin-right: 770px;
+    float: right;
+    margin-top: 200px;
+    font-size: x-large;
+}
+#imgtext7 {
+    color: lightgray;
+    text-align: center;
+    margin-right: 540px;
+    float: right;
+    margin-top: 10px;
+    font-size: medium;
+}
+#imgtext17 {
+    color: lightgray;
+    text-align: center;
+    margin-right: -120px;
+    float: right;
+    margin-top: 40px;
+    font-size: medium;
+}
+#imgtext18 {
+    color: lightgray;
+    text-align: center;
+    margin-right: -100px;
+    float: right;
+    margin-top: 80px;
+    font-size: medium;
+}
+#imgtext15 {
+    color: lightgray;
+    text-align: center;
+    margin-right: -50px;
+    float: right;
+    margin-top: 200px;
+    font-size: medium;
+}
+#imgtext16 {
+    color: lightgray;
+    text-align: center;
+    margin-right: 540px;
+    float: right;
+    margin-top: 10px;
+    font-size: medium;
+}
+#input2 {
+    color: white;
+    text-align: center;
+}
+#linkbutton {
+    float: left;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: -190px;
+}
+#cardone {
+    float: left;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 630px;
+}
+#test1 {
+    float: left;
+    position: relative;
+    margin-top: 300px;
+    margin-left: -730px;
+    margin-right: 600px;
+}
+#test1info {
+    float: left;
+    position: relative;
+    color: white;
+    margin-top: 300px;
+    margin-left: -735px;
+    margin-right: 600px;
+}
+#test2 {
+    float: left;
+    position: relative;
+    margin-top: 450px;
+    margin-left: -730px;
+    margin-right: 615px;
+}
+#test2info {
+    float: left;
+    position: relative;
+    color: white;
+    margin-top: 450px;
+    margin-left: -735px;
+    margin-right: 600px;
+}
+#test3 {
+    float: left;
+    position: relative;
+    margin-top: 300px;
+    margin-left: -200px;
+}
+#test3info {
+    float: left;
+    position: relative;
+    color: white;
+    margin-top: 300px;
+    margin-left: -195px;
+}
+#test4 {
+    float: left;
+    position: relative;
+    margin-top: 450px;
+    margin-left: -200px;
+}
+#test4info {
+    float: left;
+    position: relative;
+    color: white;
+    margin-top: 450px;
+    margin-left: -183px;
+}
+#test5 {
+    float: left;
+    position: relative;
+    margin-top: 450px;
+    margin-left: -480px;
+}
+#test5info {
+    float: left;
+    position: relative;
+    color: white;
+    margin-top: 450px;
+    margin-left: -465px;
+}
+#test6 {
+    float: left;
+    position: relative;
+    margin-top: 300px;
+    margin-left: -480px;
+}
+#test6info {
+    float: left;
+    position: relative;
+    color: white;
+    margin-top: 300px;
+    margin-left: -495px;
+}
+#result {
+    float: left;
+    position: relative;
+    margin-top: 550px;
+    margin-left: -500px;
+    margin-right: 400px;
+    height: 50px;
+}
+#cardrecension {
+    float: left;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 810px;
+}
